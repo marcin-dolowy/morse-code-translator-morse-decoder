@@ -2,6 +2,7 @@
 
 int main() {
     try {
+/*
         MorseCode c1;
         std::string asciiToMorse = c1.convert_to_morse_alphabet(MorseCode::read_file("main_file.txt"));
         std::cout << asciiToMorse;
@@ -10,6 +11,8 @@ int main() {
         std::cout << morseToAscii << '\n';
         MorseCode::save_data(asciiToMorse, "asciiToMorse.txt");
         MorseCode::save_data(morseToAscii, "morseToAscii.txt");
+*/
+        MorseCode::from_morse_to_ascii();
 
     } catch (std::runtime_error& error) {
         std::cout << error.what() << '\n';

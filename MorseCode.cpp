@@ -8,19 +8,7 @@ std::map<std::string, char> MorseCode::build_reversed_map(const std::map<char, s
     return result;
 }
 
-void MorseCode::print_map(const std::map<const char, const std::string> &map){
-    for (const auto & [key, val] : map) {
-        std::cout << key << " = " << val << '\n';
-    }
-}
-
-void MorseCode::print_map_2(const std::map<std::string, char> &map) {
-    for(const auto & [key, val] : morse_to_ascii) {
-        std::cout << key << " | " << val << '\n';
-    }
-}
-
-std::vector<std::string> MorseCode::str_to_vector_of_string(const std::string &word) {
+std::vector<std::string> MorseCode::str_to_vector_of_string(const std::string& word) {
     std::string str;
     std::stringstream ss(word);
     std::vector<std::string> vec;
@@ -53,11 +41,18 @@ std::string MorseCode::convert_to_classic_alphabet(const std::string& word) cons
     return result;
 }
 
-void MorseCode::add_text() {
+void MorseCode::from_ascii_to_morse() {
     MorseCode c1;
     std::string word;
     std::getline(std::cin, word);
     std::cout << c1.convert_to_morse_alphabet(word) << '\n';
+}
+
+void MorseCode::from_morse_to_ascii() {
+    MorseCode c1;
+    std::string word;
+    std::getline(std::cin, word);
+    std::cout << c1.convert_to_classic_alphabet(word);
 }
 
 std::string MorseCode::read_file(const std::string& filename) {
@@ -84,3 +79,4 @@ void MorseCode::save_data(const std::string& word, const std::string& filename) 
     }
     std::cout << "Saved successfully ;)" << '\n' << "You saved your text in: " << filename << '\n';
 }
+
