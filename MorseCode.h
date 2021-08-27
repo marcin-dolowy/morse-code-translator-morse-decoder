@@ -46,7 +46,7 @@ public:
     void print_map_2(const std::map<std::string, char>& map);
 
     std::string convert_to_morse_alphabet(const std::string& word) const;
-    std::string convert_to_classic_alphabet(std::string& word) const;
+    std::string convert_to_classic_alphabet(const std::string& word) const;
 
     static std::string read_file(const std::string& filename);
     static void save_data(const std::string& word, const std::string& filename);
