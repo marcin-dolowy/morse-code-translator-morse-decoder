@@ -1,5 +1,3 @@
-#include <utility>
-
 #include "libs.h"
 
 class MorseCode {
@@ -31,13 +29,14 @@ public:
     ~MorseCode() = default;
 
     [[nodiscard]] std::map<std::string, char> build_reversed_map(const std::map<char, std::string>& map) const;
-    [[nodiscard]] std::string convert_to_morse_alphabet(const std::string& word) const;
-    [[nodiscard]] std::string convert_to_classic_alphabet(const std::string& word) const;
+    [[nodiscard]] std::string convert_to_morse_code(const std::string& word) const;
+    [[nodiscard]] std::string convert_to_ascii_code(const std::string& word) const;
 
     static void from_ascii_to_morse();
     static void from_morse_to_ascii();
     static std::vector<std::string> str_to_vector_of_string(const std::string& word);
     static std::string read_file(const std::string& filename);
     static void save_data(const std::string& word, const std::string& filename);
-
+    static void display();
+    static void menu();
 };
