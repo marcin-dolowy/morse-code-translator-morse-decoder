@@ -83,7 +83,7 @@ void MorseCode::save_data(const std::string& word, const std::string& filename) 
     else {
         file << word << '\n';
     }
-    std::cout << "Saved successfully ;)" << '\n' << "You saved your text in: " << filename << '\n';
+    std::cout << "Saved successfully" << '\n' << "You saved your text in: " << filename << '\n';
 }
 
 void MorseCode::display() {
@@ -145,4 +145,3 @@ void MorseCode::menu() {
         }
     }
 }
-
